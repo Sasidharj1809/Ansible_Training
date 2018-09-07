@@ -1,0 +1,14 @@
+-
+  Name: Run multiple commands
+  hosts: all
+  tasks:
+    - name: get date
+      command: date
+      register: date
+
+    - name: get output of /etc/hosts
+      command: cat /etc/hosts
+      register: cat
+
+    - debug:
+        var: date.stdout_lines,cat.stdout_lines
