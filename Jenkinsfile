@@ -7,10 +7,13 @@ node('master') {
         // Checkout the app at the given commit sha from the webhook
         checkout scm
         def WORKSPACE = pwd()
+        "echo '$WORKSPACE'"
+
         ansiblePlaybook{
                  playbook: '$WORKSPACE/playbook-multiplecommands.yaml'
                  inventory: '$WORKPSACE/inventory.txt'
                  colorizedOutput: true}
+
         // sh "ansible-playbook -i ./ansible/hosts ./ansible/deploy.yml"
         sh "echo 'WE ARE DEPLOYING'"
         }
