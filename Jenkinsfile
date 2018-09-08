@@ -9,12 +9,13 @@ node('master') {
         def WORKSPACE = pwd()
         "echo '$WORKSPACE'"
 
-        ansiblePlaybook{
-                 playbook: '$WORKSPACE/playbook-multiplecommands.yaml'
-                 inventory: '$WORKPSACE/inventory.txt'
-                 colorizedOutput: true}
+        //ansiblePlaybook{
+        //         playbook: '$WORKSPACE/playbook-multiplecommands.yaml'
+        //         inventory: '$WORKPSACE/inventory.txt'
+         //        colorizedOutput: true}
 
-        // sh "ansible-playbook -i ./ansible/hosts ./ansible/deploy.yml"
+        sh "ansible-playbook playbook-multiplecommands.yaml -i inventory.txt"
         sh "echo 'WE ARE DEPLOYING'"
+
         }
     }
