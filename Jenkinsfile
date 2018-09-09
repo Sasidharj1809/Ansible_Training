@@ -12,7 +12,9 @@ node('Agent') {
         ansiblePlaybook{
                  playbook: '$WORKSPACE/playbook-multiplecommands.yaml'
                  inventory: '$WORKPSACE/inventory.txt'
-                colorizedOutput: true}
+                 colorized: true
+                 extras: '--syntax-check'
+        }
 
         //sh "echo '$PWD'"
         //sh "ansible-playbook playbook-multiplecommands.yaml -i inventory.txt"
