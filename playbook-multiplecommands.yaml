@@ -1,5 +1,5 @@
 -
-  Name: Run multiple commands
+  name: Run multiple commands
   hosts: all
   tasks:
     - name: get date
