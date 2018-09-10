@@ -1,0 +1,6 @@
+-
+  name: execute a script on all nodes
+  hosts: all
+  tasks:
+    - task: execute a script on all nodes
+      script: /tmp/install_Script.sh
