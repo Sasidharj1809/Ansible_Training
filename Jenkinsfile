@@ -10,10 +10,10 @@ node('Agent') {
         "echo '$WORKSPACE'"
 
         ansiblePlaybook{
-                 playbook: '$WORKSPACE/playbook-multiplecommands.yaml'
-                 inventory: '$WORKPSACE/inventory.txt'
+                 playbook: "$WORKSPACE/playbook-script-module.yaml"
+                 inventory: "$WORKPSACE/inventory.txt"
                  colorized: true
-                 extras: '--syntax-check'
+                 extras: "--syntax-check"
         }
 
         //sh "echo '$PWD'"
