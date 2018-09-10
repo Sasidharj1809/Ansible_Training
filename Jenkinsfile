@@ -9,15 +9,15 @@ node('Agent') {
         def WORKSPACE = pwd()
         "echo '$WORKSPACE'"
 
-        ansiblePlaybook{
-                 playbook: "$WORKSPACE/playbook-script-module.yaml"
-                 inventory: "$WORKPSACE/inventory.txt"
-                 colorized: true
-                 extras: "--syntax-check"
-        }
+        //ansiblePlaybook{
+        //         playbook: "$WORKSPACE/playbook-script-module.yaml"
+        //         inventory: "$WORKPSACE/inventory.txt"
+        //         colorized: true
+        //         extras: "--syntax-check"
+        //}
 
-        //sh "echo '$PWD'"
-        //sh "ansible-playbook playbook-multiplecommands.yaml -i inventory.txt"
-        //sh "echo 'WE ARE DEPLOYING'"
+        sh "echo '$PWD'"
+        sh "ansible-playbook playbook-script-module.yaml -i inventory.txt"
+        sh "echo 'WE ARE DEPLOYING'"
         }
     }
