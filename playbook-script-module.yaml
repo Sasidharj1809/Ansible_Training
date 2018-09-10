@@ -3,4 +3,4 @@
   hosts: all
   tasks:
     - task: execute a script on all nodes
-      script: /tmp/install_Script.sh
+      script: /tmp/install_script.sh
