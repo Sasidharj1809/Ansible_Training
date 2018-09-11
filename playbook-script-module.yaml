@@ -2,8 +2,7 @@
   name: execute a script on all nodes
   hosts: all
   user: sjasti
-  become: yes
-  become_user: root
+  sudo: yes
   tasks:
 
     - name: add a line to /etc/resolv.conf
