@@ -1,7 +1,9 @@
 -
   name: execute a script on all nodes
   hosts: all
-  tasks:
+  user: sjasti
+  sudo: yes
+    tasks:
 
     - name: add a line to /etc/resolv.conf
       lineinfile:
