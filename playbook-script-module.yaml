@@ -5,6 +5,7 @@
 
     - name: add a line to /etc/resolv.conf
       lineinfile:
+        sudo: true
         path: /etc/resolv.conf
         line: 'nameserver 10.10.10.10'
 
