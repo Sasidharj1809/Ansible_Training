@@ -3,8 +3,9 @@
   hosts: all
   tasks:
     - name: create a file
-      path: '/home/sjasti/Sasi.txt'
-      state: present
+      command: touch /home/sjasti/Sasi.txt
+      args:
+        creates: /home/sjasti
 
     - name: get output of Sasi.txt
       shell: cat /home/sjasti/Sasi.txt
