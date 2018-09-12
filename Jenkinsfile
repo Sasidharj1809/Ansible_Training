@@ -17,7 +17,7 @@ node('Agent') {
         //}
 
         sh "echo '$PWD'"
-        sh "ansible-playbook Playbook-variables-example.yaml -i inventory.txt"
+        sh "ansible-playbook playbook-conditional.yaml -i inventory.txt"
         sh "echo 'WE ARE DEPLOYING'"
         }
     }
