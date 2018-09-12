@@ -11,6 +11,9 @@
       shell: cat /home/sjasti/Sasi.txt
       register: commnad_output
 
+    - debug:
+        var: command_output.stdout_lines
+
     - name: add new line if doesn't exist
       shell: echo "Sasi" >> /home/sjasti/Sasi.txt
       when: command_output.stdout.find('Sasi') == -1
