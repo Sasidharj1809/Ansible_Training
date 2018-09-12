@@ -9,9 +9,15 @@
   tasks:
     - name: Print Name
       command: echo 'My name is {{name}}'
+      register: name
 
     - name: Print age
       command: echo 'My age is {{age}}'
+      register: age
 
     - name: Print gender
       command: echo 'My gender is {{gender}}'
+      register: gender
+
+      -debug:
+        var: name.stdout_lines,age.stdout_lines,gender.stdout_lines
