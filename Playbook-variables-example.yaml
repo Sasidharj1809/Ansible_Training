@@ -1,0 +1,17 @@
+-
+  name: varibale example
+  hosts: all
+  vars:
+    name: Sasi
+    age: 32
+    gender: Male
+
+  tasks:
+    - name: Print Name
+      command: echo 'My name is {{name}}'
+
+    - name: Print age
+      command: echo 'My age is {{age}}'
+
+    - name: Print gender
+      command: echo 'My gender is {{gender}}'
