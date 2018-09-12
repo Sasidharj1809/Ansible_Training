@@ -19,5 +19,5 @@
       command: echo 'My gender is {{gender}}'
       register: gender
 
-      -debug:
+    - debug:
         var: name.stdout_lines,age.stdout_lines,gender.stdout_lines
