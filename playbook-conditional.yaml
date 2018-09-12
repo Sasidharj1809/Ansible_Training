@@ -5,7 +5,7 @@
     - name: create a file
       command: touch /home/sjasti/Sasi.txt
       args:
-        creates: /home/sjasti
+        creates: /home/sjasti/Sasi.txt
 
     - name: get output of Sasi.txt
       shell: cat /home/sjasti/Sasi.txt
