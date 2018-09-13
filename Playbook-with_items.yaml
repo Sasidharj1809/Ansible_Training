@@ -16,5 +16,5 @@
       with_items: "{{ fruits }}"
 
     - debug:
-        msg: " {{ item }}"
-        with_items: "{{ query ( 'inventory_hostname','all' )}}"
+        msg: "{{ item }}"
+        with_items: "{{ inventory_hostname }}"
