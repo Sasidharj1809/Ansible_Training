@@ -13,8 +13,8 @@
       command: echo "{{ item }}"
       with_items: "{{ fruits }}"
 
-    - debug: var=hostvars[inventory_hostname]
+ #   - debug: var=hostvars[inventory_hostname]
 
     - debug:
         msg: "{{ item }}"
-        with_items: "{{ inventory_hostname }}"
+        loop: "{{ query('inventory_hostnames', 'all') }}"
