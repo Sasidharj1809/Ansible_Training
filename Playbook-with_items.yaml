@@ -1,12 +1,14 @@
 -
   name: using with_items
   hosts: all
+  vars:
+    fruits:
+      - Apple
+      - Banana
+      - Orange
+      - Grapes
+
   tasks:
-    -
-      name: using with_items
-      command: echo "{{ item }}"
-      with_items:
-        - Apple
-        - Orange
-        - Mango
-        - Banana
+    - name: using with_items
+      command: echo {{ item}}
+      with_items: {{ fruits }}
