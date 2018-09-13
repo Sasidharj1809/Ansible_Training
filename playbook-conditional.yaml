@@ -16,5 +16,5 @@
         var: output.stdout_lines
 
     - name: add new line if doesn't exist
-      shell: echo "Sasi_new" >> /home/sjasti/Sasi.txt
-      when: output.stdout.find('Sasi') == -1
+      shell: echo "Sasi" >> /home/sjasti/Sasi.txt
+      when: output.stdout.find('Sasi_new') == -1
