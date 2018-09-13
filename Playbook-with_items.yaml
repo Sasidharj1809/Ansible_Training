@@ -10,5 +10,5 @@
 
   tasks:
     - name: using with_items
-      command: echo {{ item}}
-      with_items: {{ fruits }}
+      command: echo "{{ item }}"
+      with_items: "{{ fruits }}"
