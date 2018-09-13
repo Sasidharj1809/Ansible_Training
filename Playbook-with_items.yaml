@@ -1,0 +1,12 @@
+-
+  name: using with_items
+  hosts: all
+  tasks:
+    -
+      name: using with_items
+      command: echo "{{ item }}"
+      with_tems:
+        - Apple
+        - Orange
+        - Mango
+        - Banana
