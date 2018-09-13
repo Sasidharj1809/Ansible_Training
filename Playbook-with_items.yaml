@@ -8,6 +8,8 @@
       - Orange
       - Grapes
 
+  gather_facts: true
+
   tasks:
     - name: using with_items
       command: echo "{{ item }}"
