@@ -5,7 +5,7 @@
     -
       name: using with_items
       command: echo "{{ item }}"
-      with_tems:
+      with_items:
         - Apple
         - Orange
         - Mango
