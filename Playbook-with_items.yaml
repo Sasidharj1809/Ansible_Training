@@ -12,3 +12,7 @@
     - name: using with_items
       command: echo "{{ item }}"
       with_items: "{{ fruits }}"
+
+    - debug:
+        msg: " {{ item }}"
+        with_items: "{{ query ( 'inventory_hostname','all' )}}"
