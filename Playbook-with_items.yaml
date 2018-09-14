@@ -17,4 +17,5 @@
 
     - debug:
         msg: "{{ item }}"
-        loop: "{{ query('inventory_hostnames', 'all') }}"
+        with_inventory_hostnames:
+          - all
