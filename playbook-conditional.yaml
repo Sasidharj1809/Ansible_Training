@@ -21,4 +21,4 @@
 
     - debug:
         msg: "{{ item }}"
-      loop: "{{ query('inventory_hostnames', 'all') }}"
+      loop: "{{ query('inventory_hostname', 'all') }}"
