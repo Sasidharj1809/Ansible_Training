@@ -20,5 +20,5 @@
       when: output.stdout.find('Sasi_new') == -1
 
     - debug:
-        msg: "{{ item }}"
+        msg: " Hostname is {{ item }}"
       loop: "{{ query('inventory_hostname', 'all') }}"
