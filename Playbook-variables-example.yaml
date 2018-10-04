@@ -20,4 +20,5 @@
       register: gender
 
     - debug:
-        var: name.stdout_lines,age.stdout_lines,gender.stdout_lines
+   #     var: name.stdout_lines,age.stdout_lines,gender.stdout_lines
+         msg: 'my name is {{name}}!age is {{age}}!and gender is {{gender}}
