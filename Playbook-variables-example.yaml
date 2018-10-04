@@ -20,4 +20,4 @@
       register: gender
 
     - debug:
-         msg: 'my name is {{name}}!age is {{age}}!and gender is {{gender}}'
+         msg: 'my name is {{name | title}}!age is {{age }}!and gender is {{gender | title}}'
