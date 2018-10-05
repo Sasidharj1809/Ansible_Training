@@ -11,6 +11,9 @@
       command: echo 'My name is {{name}}'
       register: name
 
+    - debug:
+        msg: 'my name is {{name | title}}'
+
     - name: Print age
       command: echo 'My age is {{age}}'
       register: age
